@@ -15,7 +15,6 @@ class beerController extends Controller
     public function index()
     {
        $beers = beer::all();
-        dd($beers);
         return view('home', compact('beers'));
     }
 
