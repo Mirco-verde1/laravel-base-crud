@@ -36,7 +36,26 @@ class BeerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       $request->validate([
+          'brand'=> 'required|max:100',
+          'type'=> 'required|max:100',
+          'nationality'=> 'required|max:100',
+          'manufactoring_plant'=> 'required|max:200',
+          'label_image'=> 'required|max:2048',
+          'description'=> 'required|max:500',
+          'price'=> 'required',       ]);
+
+        $data = $request->all();
+
+        $createBeer = new Beer;
+
+        $createBeer->fill($data);
+
+        $createBeer->save();
+
+        $beerStored= Beer::orderBy('id', 'desc')->first();
+
+        return redirect()->route('show', $beerStored);
     }
 
 

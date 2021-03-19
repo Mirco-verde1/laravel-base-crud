@@ -11,44 +11,47 @@
 <body>
 
 
-    <form>
+    <form action="{{route('beers.store')}}" method="POST">
+
+        @csrf
+        @method('POST')
 
         <div class="form-group">
           <label for="brand">Brand</label>
-          <input type="email" class="form-control" name="brand" aria-describedby="emailHelp" placeholder="Brand">
+          <input type="text" class="form-control" name="brand"  placeholder="Brand">
         </div>
 
         <div class="form-group">
           <label for="type">Type</label>
-          <input type="password" class="form-control" name="type" placeholder="Type">
+          <input type="text" class="form-control" name="type" placeholder="Type">
         </div>
 
         <div class="form-group">
             <label for="nationality">Nationality</label>
-            <input type="password" class="form-control" name="nationality" placeholder="Nationality">
+            <input type="text" class="form-control" name="nationality" placeholder="Nationality">
           </div>
 
           <div class="form-group">
-            <label for="manufactoring-plant">Manufactoring Plant</label>
-            <input type="password" class="form-control" name="manufactoring-plant" placeholder="Manufactoring Plant">
+            <label for="manufactoring_plant">Manufactoring Plant</label>
+            <input type="text" class="form-control" name="manufactoring-plant" placeholder="Manufactoring Plant">
           </div>
 
           <div class="form-group">
             <label for="label-image">Label Image</label>
-            <input type="password" class="form-control" name="label-image" placeholder="Label Image">
+            <input type="text" class="form-control" name="label-image" placeholder="Label Image">
           </div>
 
           <div class="form-group">
             <label for="description">Description</label>
-            <input type="password" class="form-control" name="description" placeholder="Description">
+            <input type="text" class="form-control" name="description" placeholder="Description">
           </div>
 
-          <div class="form-group">
+          <div class="form_group">
             <label for="price">Price</label>
-            <input type="password" class="form-control" name="price" placeholder="Price">
+            <input type="float" class="form-control" name="price" placeholder="Price">
           </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" value="submit">Submit</button>
 
       </form>
 
