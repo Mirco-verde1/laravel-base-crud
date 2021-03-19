@@ -78,21 +78,17 @@
                     @endauth
                 </div>
             @endif
-
+          <div>
+              <img src="https://lh3.googleusercontent.com/proxy/MY13C1dyivjQ_7q2FYS1toeK-6A0ybHnrq7F1xF5VznwIiu74d4MPByn1PNXVP6NEMxTvgizrnEkrTHqARSALhGy15CKIxLm5gYnCukMyGHe2WB3OGMNmgalvBpkRoQY" alt="">
+          </div>
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                   BIRRE
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="/beers">CLICK HERE FOR OUR SELECTION!</a>
+
                 </div>
             </div>
         </div>

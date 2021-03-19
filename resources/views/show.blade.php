@@ -11,7 +11,7 @@
 
             <div class="product-container">
                 <div class="card" style="width: 30rem;">
-                    <img class="card-img-top" src="{{$beer-> label_image}}" alt="Card image cap">
+                    <img class="card-img-top" src="{{$beer-> label_image}} " width="100vw" alt="Card image cap">
                     <div class="card-body">
                     <h5 class="card-title">{{$beer->name}}</h5>
                     <p class="card-text">{{$beer->description}}</p>

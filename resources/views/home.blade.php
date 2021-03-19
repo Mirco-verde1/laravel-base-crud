@@ -18,6 +18,7 @@
             <th scope="col">Type</th>
             <th scope="col">Nationality</th>
             <th scope="col">Label</th>
+          <th><a href="beers/create">Add New</a></th>
           </tr>
         </thead>
         <tbody>

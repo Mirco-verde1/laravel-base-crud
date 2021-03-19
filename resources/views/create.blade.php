@@ -10,6 +10,8 @@
 </head>
 <body>
 
+    {{-- if per la validazione dei campi inseriti --}}
+
     @if ($errors->any())
         <div class="alert alert-danger">
         <ul>
@@ -21,7 +23,7 @@
       @endif
 
 
-    <form action="{{route('beers.store')}}" method="POST">
+      <form class="needs-validation" action="{{route('beers.store')}}" method="post" novalidate>
 
 
 
@@ -40,7 +42,10 @@
 
         <div class="form-group">
             <label for="nationality">Nationality</label>
-            <input type="text" class="form-control" name="nationality" placeholder="Nationality">
+            <input type="text" class="form-control" name="nationality" placeholder="Nationality" required>
+            <div class="invalid-feedback">
+                Looks good!
+              </div>
           </div>
 
           <div class="form-group">
