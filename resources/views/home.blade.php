@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <link rel="stylesheet" href="{{asset('js/app.js')}}">
     <title>Document</title>
 </head>
 <body>
@@ -25,11 +26,14 @@
 
 
           <tr>
+
+
             <th scope="row">{{$item-> id}}</th>
             <td>{{$item-> brand}}</td>
             <td>{{$item-> type}}</td>
             <td>{{$item-> nationality}}</td>
-            <td><img src="{{$item-> label_image}}" width="150"></td>
+            <td><a href="/beers/{{$item->id}}"><img src="{{$item-> label_image}}" width="230"> </a></td>
+
 
 
           </tr>

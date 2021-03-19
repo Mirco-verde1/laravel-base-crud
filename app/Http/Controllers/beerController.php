@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\beer;
+use App\Beer;
 use Illuminate\Http\Request;
 
-class beerController extends Controller
+class BeerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class beerController extends Controller
      */
     public function index()
     {
-       $beers = beer::all();
+       $beers = Beer::all();
         return view('home', compact('beers'));
     }
 
@@ -39,15 +39,19 @@ class beerController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
+
+ /**
+     * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  Beer  $beerDetails
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+
+
+    public function show(Beer $beer)
     {
-        //
+      return view('show', compact('beer'));
+
     }
 
     /**
