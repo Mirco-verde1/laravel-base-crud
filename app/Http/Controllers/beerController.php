@@ -35,6 +35,7 @@ class BeerController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
+
     {
        $request->validate([
           'brand'=> 'required|max:100',
@@ -44,6 +45,7 @@ class BeerController extends Controller
           'label_image'=> 'required|max:2048',
           'description'=> 'required|max:500',
           'price'=> 'required',       ]);
+
 
         $data = $request->all();
 
@@ -55,7 +57,7 @@ class BeerController extends Controller
 
         $beerStored= Beer::orderBy('id', 'desc')->first();
 
-        return redirect()->route('show', $beerStored);
+        return redirect()->route('beers.show', $beerStored);
     }
 
 

@@ -10,8 +10,20 @@
 </head>
 <body>
 
+    @if ($errors->any())
+        <div class="alert alert-danger">
+        <ul>
+        @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+        </ul>
+        </div>
+      @endif
+
 
     <form action="{{route('beers.store')}}" method="POST">
+
+
 
         @csrf
         @method('POST')
@@ -33,12 +45,12 @@
 
           <div class="form-group">
             <label for="manufactoring_plant">Manufactoring Plant</label>
-            <input type="text" class="form-control" name="manufactoring-plant" placeholder="Manufactoring Plant">
+            <input type="text" class="form-control" name="manufactoring_plant" placeholder="Manufactoring Plant">
           </div>
 
           <div class="form-group">
             <label for="label-image">Label Image</label>
-            <input type="text" class="form-control" name="label-image" placeholder="Label Image">
+            <input type="text" class="form-control" name="label_image" placeholder="Label Image">
           </div>
 
           <div class="form-group">
