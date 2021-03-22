@@ -37,15 +37,7 @@ class BeerController extends Controller
     public function store(Request $request)
 
     {
-       $request->validate([
-          'brand'=> 'required|max:100',
-          'type'=> 'required|max:100',
-          'nationality'=> 'required|max:100',
-          'manufactoring_plant'=> 'required|max:200',
-          'label_image'=> 'required|max:2048',
-          'description'=> 'required|max:500',
-          'price'=> 'required|numeric|between:0,9999,99'      ]);
-
+      $this->validationForm($request);
 
         $data = $request->all();
 
@@ -60,6 +52,22 @@ class BeerController extends Controller
         return redirect()->route('beers.show', $beerStored);
     }
 
+    // validation method
+
+    protected function validationForm(Request $request){
+
+    $request->validate([
+
+        'brand'=> 'required|max:100',
+        'type'=> 'required|max:100',
+        'nationality'=> 'required|max:100',
+        'manufactoring_plant'=> 'required|max:200',
+        'label_image'=> 'required|max:2048',
+        'description'=> 'required|max:1000',
+        'price'=> 'required|numeric|between:0,9999,99'
+
+    ]);
+    }
 
  /**
      * Show the form for editing the specified resource.
@@ -94,7 +102,7 @@ class BeerController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Beer $beer)
-    {
+    {    $this->validationForm($request);
         $data= $request->all();
         $beer->update($data);
 

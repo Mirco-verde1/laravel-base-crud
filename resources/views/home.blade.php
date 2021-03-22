@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <link rel="stylesheet" href="{{asset('js/app.js')}}">
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <title>Document</title>
+    <title>BEERS SHOP</title>
 </head>
 <body>
 
@@ -38,7 +38,7 @@
             <td>{{$item-> type}}</td>
             <td>{{$item-> nationality}}</td>
             <td>{{$item-> price}}  €</td>
-            <td><a href="/beers/{{$item->id}}"><img src="{{$item-> label_image}}" width="200"> </a>
+            <td><a href="/beers/{{$item->id}}"><img src="{{$item-> label_image}}" width="450" height="280"> </a>
 
                 <a href="/beers/{{$item->id}}">
                     <button type="submit" class="btn btn-info">
@@ -63,11 +63,11 @@
                             @method('DELETE')
 
                                   <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
-                                    Delete
+                                    <i class="fas fa-trash-alt"></i>
                                   </button>
 
 
-                                  @include('modal')
+                                  @include('modal.modal')
 
                                         </div>
                                       </div>
