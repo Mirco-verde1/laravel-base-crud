@@ -78,7 +78,7 @@
             </div>
           </div>
 
-        <button type="submit" value="submit">Submit</button>
+        <button type="submit" value="submit">Add New</button>
 
       </form>
 
