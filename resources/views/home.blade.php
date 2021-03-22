@@ -18,7 +18,7 @@
             <th scope="col">Type</th>
             <th scope="col">Nationality</th>
             <th scope="col">Label</th>
-          <th><a href="beers/create">Add New</a></th>
+
           </tr>
         </thead>
         <tbody>
@@ -33,7 +33,30 @@
             <td>{{$item-> brand}}</td>
             <td>{{$item-> type}}</td>
             <td>{{$item-> nationality}}</td>
-            <td><a href="/beers/{{$item->id}}"><img src="{{$item-> label_image}}" width="230"> </a></td>
+            <td><a href="/beers/{{$item->id}}"><img src="{{$item-> label_image}}" width="200"> </a>
+
+                <a href="/beers/{{$item->id}}">
+                    <button type="submit" class="btn btn-info">
+                        INFO
+                    </button>
+                    </a>
+
+
+                    <a href="{{ route('beers.edit',[ $item->id]) }}">
+                        <button type="submit" class="btn btn-info">
+                            EDIT
+                        </button>
+                        </a>
+
+                    <form action="{{ route('beers.destroy',[$item->id]) }}" method="post">
+
+                            <button type="submit" class="btn btn-danger">
+                               DELETE
+                            </button>
+
+                    </form>
+            </td>
+
 
 
 

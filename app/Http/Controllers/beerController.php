@@ -44,7 +44,7 @@ class BeerController extends Controller
           'manufactoring_plant'=> 'required|max:200',
           'label_image'=> 'required|max:2048',
           'description'=> 'required|max:500',
-          'price'=> 'required',       ]);
+          'price'=> 'required|numeric|between:0,9999,99'      ]);
 
 
         $data = $request->all();
@@ -81,9 +81,9 @@ class BeerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Beer $beer)
     {
-        //
+        return view('edit', compact('beer'));
     }
 
     /**
@@ -93,9 +93,12 @@ class BeerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Beer $beer)
     {
-        //
+        $data= $request->all();
+        $beer->update($data);
+
+        return redirect()->route('beers.show',compact('beer'));
     }
 
     /**

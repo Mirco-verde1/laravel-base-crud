@@ -10,12 +10,16 @@
 <body>
 
             <div class="product-container">
-                <div class="card" style="width: 30rem;">
-                    <img class="card-img-top" src="{{$beer-> label_image}} " width="100vw" alt="Card image cap">
+                <div class="card">
+
                     <div class="card-body">
+                     <h4 class="brand">{{$beer->brand}}</h4>
                     <h5 class="card-title">{{$beer->name}}</h5>
+                    <h5 class="price">{{$beer->price}}$</h5>
                     <p class="card-text">{{$beer->description}}</p>
-                    <a href="/beers" class="btn btn-primary">Return</a>
+
+                    <img class="card-img-top" src="{{$beer-> label_image}} " alt="Card image cap">
+                    <a href="/beers" class="btn btn-primary">Return Shop</a>
                     </div>
                 </div>
             </div>

@@ -65,25 +65,13 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
           <div>
               <img src="https://lh3.googleusercontent.com/proxy/MY13C1dyivjQ_7q2FYS1toeK-6A0ybHnrq7F1xF5VznwIiu74d4MPByn1PNXVP6NEMxTvgizrnEkrTHqARSALhGy15CKIxLm5gYnCukMyGHe2WB3OGMNmgalvBpkRoQY" alt="">
           </div>
             <div class="content">
                 <div class="title m-b-md">
-                   BIRRE
+                   BEERS SHOP
                 </div>
 
                 <div class="links">
