@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 
 class BeerController extends Controller
 {
+
+
     /**
      * Display a listing of the resource.
      *
@@ -18,6 +20,8 @@ class BeerController extends Controller
         return view('home', compact('beers'));
     }
 
+
+
     /**
      * Show the form for creating a new resource.
      *
@@ -27,6 +31,8 @@ class BeerController extends Controller
     {
         return view('create');
     }
+
+
 
     /**
      * Store a newly created resource in storage.
@@ -52,6 +58,8 @@ class BeerController extends Controller
         return redirect()->route('beers.show', $beerStored);
     }
 
+
+
     // validation method
 
     protected function validationForm(Request $request){
@@ -69,6 +77,8 @@ class BeerController extends Controller
     ]);
     }
 
+
+
  /**
      * Show the form for editing the specified resource.
      *
@@ -83,6 +93,8 @@ class BeerController extends Controller
 
     }
 
+
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -93,6 +105,8 @@ class BeerController extends Controller
     {
         return view('edit', compact('beer'));
     }
+
+
 
     /**
      * Update the specified resource in storage.

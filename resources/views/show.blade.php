@@ -13,12 +13,15 @@
                 <div class="card">
 
                     <div class="card-body">
-                     <h4 class="brand">{{$beer->brand}}</h4>
-                    <h5 class="card-title">{{$beer->name}}</h5>
-                    <h5 class="price">{{$beer->price}} €</h5>
-                    <p class="card-text">{{$beer->description}}</p>
+                  <img class="card-img-top" src="{{$beer-> label_image}} " alt="Card image cap">
 
-                    <img class="card-img-top" src="{{$beer-> label_image}} " alt="Card image cap">
+
+                    <p class="card-text">{{$beer->description}}</p>
+                    <h4 class="brand">{{$beer->brand}}</h4>
+                    <h5 class="card-title">{{$beer->type}}</h5>
+                    <h5 class="price">Price: {{$beer->price}} €</h5>
+
+
                     <a href="/beers" class="btn btn-primary">Return Shop</a>
                     </div>
                 </div>
