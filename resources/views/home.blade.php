@@ -25,6 +25,9 @@
         </thead>
         <tbody>
 
+
+            {{-- Product description --}}
+
             @foreach ($beers as $item)
 
 
@@ -52,39 +55,30 @@
 
 
 
+                       {{-- Delete products --}}
+
+                        <form action="{{ route('beers.destroy',[$item->id]) }}" method="post">
+
+                            @csrf
+                            @method('DELETE')
+
+                                  <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
+                                    Delete
+                                  </button>
+
+
+                                  @include('modal')
+
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+
+                          </form>
 
 
 
-
-
-                        <!-- Button trigger modal -->
-<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
-    Delete
-</button>
-
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Delete Product</h5>
-
-        </div>
-
-        <div class="modal-footer">
-            <form action="{{ route('beers.destroy',[$item->id]) }}" method="post">
-
-                @csrf
-                @method('DELETE')
-                      <button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
-                         Are you sure?
-                      </button>
-
-              </form>
-        </div>
-      </div>
-    </div>
-  </div>
             </td>
 
 
