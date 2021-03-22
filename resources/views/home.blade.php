@@ -18,6 +18,7 @@
             <th scope="col">Type</th>
             <th scope="col">Nationality</th>
             <th scope="col">Label</th>
+           <th scope="col"><a href="beers/create">Add New Product</a></th>
 
           </tr>
         </thead>
@@ -48,8 +49,11 @@
                         </button>
                         </a>
 
+
                     <form action="{{ route('beers.destroy',[$item->id]) }}" method="post">
 
+                      @csrf
+                      @method('DELETE')
                             <button type="submit" class="btn btn-danger">
                                DELETE
                             </button>
